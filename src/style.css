@@ -1,0 +1,243 @@
+:root {
+  --bg-color: #f3f4f6;
+  --text-color: #000000;
+  --brand-green: #154734;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.phone-container {
+  max-width: 440px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.header-curve {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  background-color: #000;
+  /* Slight convex curve at the bottom */
+  border-bottom-left-radius: 50% 40px;
+  border-bottom-right-radius: 50% 40px;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo-container {
+  margin-top: 140px;
+  /* Overlaps the curve */
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 130px;
+  height: 130px;
+  background-color: #000;
+  color: #fff;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -3px;
+  padding-right: 5px;
+  /* adjust for kerning of 'hg.' */
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.social-icons a {
+  color: #000;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: var(--brand-green);
+}
+
+/* Trust Banner */
+.trust-banner {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #000;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.trust-banner .highlight {
+  background-color: var(--brand-green);
+  color: #fff;
+  padding: 0px 8px;
+  display: inline-block;
+  margin: 4px 0;
+}
+
+/* Links List */
+.links-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 18px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  position: relative;
+  /* Solid grey shadow offset */
+  box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.link-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 3px 0px var(--brand-green);
+}
+
+.link-btn .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: -8px;
+  /* Offset to keep text centered */
+  position: absolute;
+  left: 20px;
+}
+
+/* Text centered inside the button */
+.link-btn {
+  justify-content: center;
+}
+
+/* Video Thumbnail Link */
+.link-video {
+  display: block;
+  width: 100%;
+  height: 140px;
+  background-color: #333;
+  /* Placeholder for image */
+  background-image: url('https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=1000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  border: 3px solid transparent;
+}
+
+.link-video:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 3px 0px var(--brand-green);
+  border-color: var(--brand-green);
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fff;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.video-subtitle {
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+.footer {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
