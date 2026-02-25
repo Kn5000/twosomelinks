@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Track Social Icons
     const socialIcons = document.querySelectorAll('.social-icons a');
     socialIcons.forEach(icon => {
-        icon.addEventListener('click', (e) => {
+        icon.addEventListener('click', () => {
             const platform = icon.getAttribute('aria-label') || 'Unknown Social';
             posthog.capture('social_link_clicked', { platform: platform });
         });
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Track Main Links and Video Links
     const mainLinks = document.querySelectorAll('.link-btn, .link-video');
     mainLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
+        link.addEventListener('click', () => {
             // Try to get text content or fallback to a data attribute if we add one, or use class names
             let linkName = link.textContent?.trim() || 'Video Link';
 
