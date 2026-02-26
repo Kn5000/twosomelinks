@@ -62,15 +62,15 @@ body {
 }
 
 .logo {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   background-color: #000;
-  border: 8px solid #fff;
+  border: 6px solid #fff;
   border-radius: 50%;
-  object-fit: contain;
-  /* ensures image fits */
-  padding: 15px;
-  /* give it some breathing room inside the circle */
+  object-fit: scale-down;
+  /* prevents cutting off any edges */
+  padding: 10px;
+  /* enough space for the inner logo */
 }
 
 .title {
