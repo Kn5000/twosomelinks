@@ -14,5 +14,8 @@
   },
   "dependencies": {
     "posthog-js": "^1.353.1"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
