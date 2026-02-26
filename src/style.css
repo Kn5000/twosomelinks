@@ -241,3 +241,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.footer-icon {
+  width: 40px;
+  height: auto;
+  opacity: 0.9;
+}
