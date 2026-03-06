@@ -3,7 +3,7 @@ import posthog from 'posthog-js'
 
 // Initialize PostHog Analytics
 posthog.init('phc_ukn6YnBRnkjeMqNYJBObCIKiMGDztYegJFqHLTJFv3n', {
-    api_host: 'https://eu.i.posthog.com',
+    api_host: 'https://us.i.posthog.com',
     person_profiles: 'identified_only',
     capture_pageview: true,
 })
