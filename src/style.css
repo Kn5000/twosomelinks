@@ -219,7 +219,14 @@ body {
   margin-left: 2px;
 }
 
-.link-btn:hover,
+@media (hover: hover) {
+  .link-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 3px 0px var(--brand-accent);
+    border-color: var(--brand-accent);
+  }
+}
+
 .link-btn:active {
   transform: translate(2px, 2px);
   box-shadow: 2px 3px 0px var(--brand-accent);
@@ -232,7 +239,14 @@ body {
   border: none;
 }
 
-.link-btn.main-action:hover,
+@media (hover: hover) {
+  .link-btn.main-action:hover {
+    background-color: var(--brand-accent-hover);
+    color: #111;
+    box-shadow: 2px 3px 0px #444;
+  }
+}
+
 .link-btn.main-action:active {
   background-color: var(--brand-accent-hover);
   color: #111;
@@ -311,7 +325,6 @@ body {
 
 .footer {
   margin-bottom: 25px;
-  margin-top: auto;
   display: flex;
   justify-content: center;
   align-items: center;
