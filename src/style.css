@@ -278,13 +278,11 @@ body {
   align-items: center;
 }
 
-.footer-dot {
-  font-family: 'Inter', sans-serif;
-  font-size: 4rem;
-  font-weight: 900;
-  color: var(--brand-accent);
-  line-height: 0.5;
-  margin-top: -20px;
+.footer-logo {
+  width: 60px;
+  height: auto;
+  opacity: 0.8;
+  margin-top: -10px;
   /* pull it up slightly */
 }
 
