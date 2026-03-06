@@ -9,9 +9,10 @@ posthog.init('phc_ukn6YnBRnkjeMqNYJBObCIKiMGDztYegJFqHLTJFv3n', {
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Track outbound link clicks
     const links = document.querySelectorAll('.link-btn');
+
     links.forEach(link => {
+        // Track outbound link clicks
         link.addEventListener('click', () => {
             const targetUrl = link.getAttribute('href');
             const targetText = link.textContent?.trim() || 'Unknown Link';
@@ -21,6 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: targetText
             });
         });
+
+        // Precise mobile tap feedback (ignores scroll highlighting)
+        link.addEventListener('touchstart', () => {
+            link.classList.add('tap-active');
+        }, { passive: true });
+
+        link.addEventListener('touchmove', () => {
+            link.classList.remove('tap-active');
+        }, { passive: true });
+
+        link.addEventListener('touchend', () => {
+            setTimeout(() => link.classList.remove('tap-active'), 150);
+        }, { passive: true });
+
+        link.addEventListener('touchcancel', () => {
+            link.classList.remove('tap-active');
+        }, { passive: true });
     });
 });
 
