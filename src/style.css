@@ -96,6 +96,43 @@ body {
   text-align: center;
 }
 
+/* Trustpilot */
+.trustpilot-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 6px 14px;
+  text-decoration: none;
+  color: #c4c4c4;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.trustpilot-pill:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+  color: #fff;
+}
+
+.tp-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.tp-stars svg {
+  width: 14px;
+  height: 14px;
+}
+
+.tp-text strong {
+  font-weight: 800;
+  color: #fff;
+}
+
 /* Social Icons */
 .social-icons {
   display: flex;
